@@ -25,10 +25,12 @@ class LandingPage extends StatelessWidget {
     final AppModel appModel =
         ScopedModel.of<AppModel>(context, rebuildOnChange: true);
     return MaterialApp(
-      title: 'Flutter For Web Demo',
+      title: 'Palo IT 2020',
       theme: appModel.isDark ? ThemeData.dark() : ThemeData.light(),
-      home: Scaffold(
-        body: WebBody(),
+      home: SafeArea(
+        child: Scaffold(
+          body: WebBody(),
+        ),
       ),
     );
   }
