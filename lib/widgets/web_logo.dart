@@ -11,11 +11,17 @@ class WebLogo extends StatelessWidget {
     Timer.periodic(
       Duration(seconds: 1),
       (timer) {
-        if (appModel.seeds >= 100 && appModel.seeds < 2000) {
+        if (appModel.seeds >= 100 && appModel.seeds < 20000) {
           appModel.updateSeed(appModel.seeds + 100.0);
         } else {
           appModel.updateSeed(100);
         }
+      },
+    );
+    Timer.periodic(
+      Duration(seconds: 10),
+      (timer) {
+        appModel.toggleTheme(!appModel.isDark);
       },
     );
   }
@@ -32,21 +38,35 @@ class WebLogo extends StatelessWidget {
       child: Stack(
         children: [
           SunFlowerArea(),
-          Container(
-            width: 400,
-            height: 400,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.transparent,
-              image: DecorationImage(
-                image: AssetImage(
-                  appModel.isDark
-                      ? 'images/white_logo_L.png'
-                      : 'images/colour_logo_M.png',
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   width: 100,
+          //   height: 100,
+          //   left: 100,
+          //   right: 0,
+          //   child: SunFlowerArea(),
+          // ),
+          // Positioned(
+          //   width: 100,
+          //   height: 100,
+          //   right: 100,
+          //   left: 0,
+          //   child: SunFlowerArea(),
+          // ),
+          // Container(
+          //   width: 400,
+          //   height: 400,
+          //   decoration: BoxDecoration(
+          //     shape: BoxShape.circle,
+          //     color: Colors.transparent,
+          //     image: DecorationImage(
+          //       image: AssetImage(
+          //         appModel.isDark
+          //             ? 'images/white_logo_L.png'
+          //             : 'images/colour_logo_M.png',
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

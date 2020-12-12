@@ -6,19 +6,21 @@ class WebBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          WebLogo(),
-          SizedBox(
-            height: 10.0,
-          ),
-          ContentSwitcher(),
-          SizedBox(
-            height: 10.0,
-          ),
-          // ContentSlider(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            WebLogo(),
+            // SizedBox(
+            //   height: 10.0,
+            // ),
+            ContentSwitcher(),
+            // SizedBox(
+            //   height: 10.0,
+            // ),
+            // ContentSlider(),
+          ],
+        ),
       ),
     );
   }
