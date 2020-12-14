@@ -10,15 +10,13 @@ class SunFlowerArea extends StatelessWidget {
   Widget build(BuildContext context) {
     final AppModel appModel =
         ScopedModel.of<AppModel>(context, rebuildOnChange: true);
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.transparent),
       ),
       child: SizedBox(
-        width: width - 100,
-        height: width - 700,
+        width: 400,
+        height: 400,
         child: CustomPaint(
           painter: _SunflowerPainter(appModel.sunFlowerSeeds),
         ),
@@ -28,8 +26,8 @@ class SunFlowerArea extends StatelessWidget {
 }
 
 class _SunflowerPainter extends CustomPainter {
-  static const seedRadius = 2.0;
-  static const scaleFactor = 6;
+  static const seedRadius = 1.0;
+  static const scaleFactor = 4;
   static const tau = math.pi * 2;
 
   static final phi = (math.sqrt(5) + 1) / 2;

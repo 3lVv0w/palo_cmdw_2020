@@ -38,35 +38,21 @@ class WebLogo extends StatelessWidget {
       child: Stack(
         children: [
           SunFlowerArea(),
-          // Positioned(
-          //   width: 100,
-          //   height: 100,
-          //   left: 100,
-          //   right: 0,
-          //   child: SunFlowerArea(),
-          // ),
-          // Positioned(
-          //   width: 100,
-          //   height: 100,
-          //   right: 100,
-          //   left: 0,
-          //   child: SunFlowerArea(),
-          // ),
-          // Container(
-          //   width: 400,
-          //   height: 400,
-          //   decoration: BoxDecoration(
-          //     shape: BoxShape.circle,
-          //     color: Colors.transparent,
-          //     image: DecorationImage(
-          //       image: AssetImage(
-          //         appModel.isDark
-          //             ? 'images/white_logo_L.png'
-          //             : 'images/colour_logo_M.png',
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          Container(
+            width: 400,
+            height: 400,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.transparent,
+              image: DecorationImage(
+                image: AssetImage(
+                  appModel.isDark
+                      ? 'images/white_logo_L.png'
+                      : 'images/colour_logo_M.png',
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
