@@ -18,12 +18,6 @@ class WebLogo extends StatelessWidget {
         }
       },
     );
-    Timer.periodic(
-      Duration(seconds: 10),
-      (timer) {
-        appModel.toggleTheme(!appModel.isDark);
-      },
-    );
   }
 
   @override
